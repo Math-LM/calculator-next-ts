@@ -1,26 +1,70 @@
 @import "tailwindcss";
 
-@theme {
-  /* Fundo da janela */
-  --color-calc-bg: #f3f3f3;
-
-  /* Teclas de número (as mais claras) */
-  --color-key-number: #ffffff;
-  --color-key-number-hover: #f5f5f5;
-
-  /* Teclas de função e operadores (%, CE, ÷, ×...) */
-  --color-key-function: #f9f9f9;
-  --color-key-function-hover: #ececec;
-
-  /* Tecla de igual (destaque azul) */
-  --color-key-equals: #005fb8;
-  --color-key-equals-hover: #1975c5;
-
-  /* Texto */
-  --color-text-primary: #1a1a1a;
-  --color-text-muted: #a0a0a0; /* MC, MR desativados */
-  --color-text-on-accent: #ffffff;
-
-  /* Bordas sutis entre as teclas */
-  --color-key-border: #e5e5e5;
+/* Liga a fonte carregada pelo next/font (layout.tsx) à classe "font-display".
+   "inline" porque o valor é uma variável definida em tempo de execução no <html>. */
+@theme inline {
+  --font-display: var(--font-roboto), sans-serif;
 }
+
+/* ===== Paleta 1: Dark moderna (ativa) ===== */
+@theme {
+  --color-calc-frame:          var(--color-zinc-900);
+  --color-calc-display:        var(--color-zinc-900);
+  --color-calc-display-text:   var(--color-white);
+
+  --color-calc-number:         var(--color-zinc-800);
+  --color-calc-number-hover:   var(--color-zinc-700);
+  --color-calc-number-text:    var(--color-white);
+
+  --color-calc-function:       var(--color-zinc-600);
+  --color-calc-function-hover: var(--color-zinc-500);
+  --color-calc-function-text:  var(--color-white);
+
+  --color-calc-operator:       var(--color-orange-500);
+  --color-calc-operator-hover: var(--color-orange-400);
+  --color-calc-operator-text:  var(--color-white);
+
+  --color-calc-equals:         var(--color-orange-600);
+  --color-calc-equals-hover:   var(--color-orange-500);
+  --color-calc-equals-text:    var(--color-white);
+}
+
+/* ===== Paleta 2: Clara e limpa =====
+@theme {
+  --color-calc-frame:          var(--color-slate-200);
+  --color-calc-display:        var(--color-slate-800);
+  --color-calc-display-text:   var(--color-white);
+  --color-calc-number:         var(--color-white);
+  --color-calc-number-hover:   var(--color-slate-100);
+  --color-calc-number-text:    var(--color-slate-900);
+  --color-calc-function:       var(--color-slate-200);
+  --color-calc-function-hover: var(--color-slate-300);
+  --color-calc-function-text:  var(--color-slate-700);
+  --color-calc-operator:       var(--color-indigo-50);
+  --color-calc-operator-hover: var(--color-indigo-100);
+  --color-calc-operator-text:  var(--color-indigo-600);
+  --color-calc-equals:         var(--color-indigo-600);
+  --color-calc-equals-hover:   var(--color-indigo-500);
+  --color-calc-equals-text:    var(--color-white);
+}
+*/
+
+/* ===== Paleta 3: Verde-azulado =====
+@theme {
+  --color-calc-frame:          var(--color-stone-200);
+  --color-calc-display:        var(--color-teal-950);
+  --color-calc-display-text:   var(--color-teal-50);
+  --color-calc-number:         var(--color-stone-50);
+  --color-calc-number-hover:   var(--color-stone-100);
+  --color-calc-number-text:    var(--color-stone-900);
+  --color-calc-function:       var(--color-stone-200);
+  --color-calc-function-hover: var(--color-stone-300);
+  --color-calc-function-text:  var(--color-stone-700);
+  --color-calc-operator:       var(--color-teal-100);
+  --color-calc-operator-hover: var(--color-teal-200);
+  --color-calc-operator-text:  var(--color-teal-800);
+  --color-calc-equals:         var(--color-teal-600);
+  --color-calc-equals-hover:   var(--color-teal-500);
+  --color-calc-equals-text:    var(--color-white);
+}
+*/
